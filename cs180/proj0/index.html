@@ -24,6 +24,8 @@
             grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
             gap: 16px;
         }
+        /* Make the selfie pair the same visual size without affecting others */
+        .photo-grid.same-size img { aspect-ratio: 3 / 4; object-fit: cover; }
         figure { margin: 0; }
         img {
             max-width: 100%;
@@ -39,6 +41,7 @@
             margin-top: 8px;
         }
         .gif-center { text-align: center; }
+        .gif-center img { margin: 0 auto; }
     </style>
 </head>
 <body>
@@ -50,7 +53,7 @@
 
         <div class="section">
             <h2>Selfie: The Wrong Way vs. The Right Way</h2>
-            <div class="photo-grid">
+            <div class="photo-grid same-size">
                 <figure>
                     <img src="images/selfieclose.jpg" alt="Close-up selfie">
                     <figcaption>Camera too close (wide‑angle distortion)</figcaption>
